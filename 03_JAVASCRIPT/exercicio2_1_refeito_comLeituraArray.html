@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <section id="resultado2"></section>
+
+    <section id="resultado"></section>
+
+    <script>
+      let saida2 = document.querySelector("section#resultado2");
+      let soma = 0;
+      let contagemNeg = 0;
+      let somaPos = 0;
+      let somaNeg = 0;
+      let contagemPos = 0;
+      let mediaNeg = 0;
+      let mediaPos = 0;
+      let adicionar = 0;
+      adicionar = Number(prompt("quantas notas deseja adicionar?"));
+      let input = new Array(adicionar);
+      let saida = document.querySelector("section#resultado");
+
+      for (let i = 0; i < adicionar; i++) {
+        do {
+          input[i] = Number(prompt(`introduza a sua ${i + 1}a nota `));
+        } 
+        while (input[i] < 0 || input[i] > 20);
+        soma += input[i];
+
+        if (input[i] >= 10) {
+          contagemPos++;
+          somaPos += input[i];
+        } else {
+          contagemNeg++;
+          somaNeg += input[i];
+        }
+      }
+      mediaPos = somaPos / contagemPos;
+      mediaNeg = somaNeg / contagemNeg;
+      media = soma / adicionar;
+      saida2.innerHTML = " as notas introduzidas foram:";
+      for (i = 0; i < adicionar; i++) {
+        saida2.innerHTML += input[i] + " ,";
+      }
+
+      saida.innerHTML +=
+        "<hr><p> A media das " +
+        adicionar +
+        " notas  é " +
+        media.toFixed(2) +
+        ".</p>";
+      saida.innerHTML +=
+        " A media das" +
+        contagemPos +
+        "notas positivas é " +
+        mediaPos.toFixed(2) +
+        ".";
+      saida.innerHTML +=
+        " <p>A media das" +
+        contagemNeg +
+        " notas negativas é " +
+        mediaNeg.toFixed(2) +
+        ".</p>";
+    </script>
+  </body>
+</html>

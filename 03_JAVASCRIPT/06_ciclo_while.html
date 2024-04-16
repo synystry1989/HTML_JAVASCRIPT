@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+p{
+    font-size:24px;
+    color: blue;
+}
+
+.frase{
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-size:larger;  
+ font-style: italic; 
+}
+</style>
+
+    
+</head>
+
+<body>
+    <script>
+// DEFENIR VARIAVEL INDETERMINADA do tipo number
+        let numero=Number()
+        //ou atribuir resultado tbm classifica o tipo
+        let resultado =0
+        let contador=0
+        alert("devera introduzir numero inteiros \na aplicacao termina quando a soma dos valores chegar ou ultrapassar os 100")
+
+        while (resultado <= 100)
+        {
+
+        numero = Number(prompt("insitra o seu numero"))
+        contador++//conta o numero de numeros introduzidos ou seja o nr de vezes k o loop foi repetido
+        resultado = resultado + numero
+        }
+                                                        // atribuimos classificacao de paragrafo 
+        document.write("<p class ='frase'>a soma dos numeros é :"+resultado,"<p/>","<p>e introduzimos ",contador,"numeros.</p>")
+
+    </script>
+</body>
+
+</html>

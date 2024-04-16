@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 01</title>
+</head>
+<body>
+    <!--  table>tr*6td*2 para criar varias tabelas de uma vez -->
+<!-- Check box --  input para escrever nome na tabela -- (no email colocar Type="email" assim teremos mais validações) No curso
+imput do tipo radio no Regime  faz o botão de opção ASSIM
+  <input type="radio" id="fRegime" name="fRegime"> Laboral
+                <input type="radio" id="fRegime" name="fRegime"> -->
+ 
+<form action=""></form>
+ 
+    <h1>Formulários</h1>
+    <table border="1">
+        <tr>
+          <th colspan="2"> Incrição</th>
+        </tr>
+        <tr>
+            <td> Nome </td>
+            <td> <input type="text" id="fnome" name="fnome"></td>
+        </tr>
+        <tr>
+            <td>Conbtribuinte </td>
+            <td> <input type="text" id="fnome" name="fnome"></td>
+        </tr>
+        <tr>
+            <td>Email </td>
+            <td><input type="email" id="fnome" name="fnome"> </td>
+        </tr>
+        <tr>
+            <td>Curso </td>
+            <td>
+                <select name="Fcursos" id="Fcursos">
+ 
+                <option value="swDeveloper">
+                    Software Developer
+                </option>
+ 
+                <option value="dataAnalyst">
+                  Data Analyst  
+                </option>
+            </select>
+             </td>
+        </tr>
+        <tr>
+            <td>Regime</td>
+            <td>
+                <!-- Para escolher a opção seelecionando na palavra, colocamos a mesma variavel no ID e no Label for (os espaços dentro do maior e do menor interfere na largura da tabela)-->
+                <input type="radio" id="fLaboral" name="fRegime"><label for="fLaboral">Laboral</label>
+                <!-- type diz nos o tipo de texto  que vai ter -->
+                <input type="radio" id="fPosLaboral" name="fRegime">
+                <label for="fPosLaboral">Pós Laboral</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Preferência de meses</td>
+            <td>
+                <input type="checkbox" id="fJaneiro" name="fJaneiro"> <label for="fJaneiro"> Janeiro</label>  
+                <input type="checkbox" id="fFevereiro" name="fFevereiro"> <label for="fFevereiro"> Fevereiro</label>  
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <!-- no value aparece na pagino o que nos escrevemos  -->
+                <input type="submit" value="Enviar formulário" form="Inscrição">
+                <input type="reset" value="Limpar formulário" form="Incrição">
+            </td>
+           
+        </tr>
+    </table>
+ 
+    <form action=""></form>
+ 
+ 
+ 
+ 
+</body>
+</html>
+ 
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 2 </title>
+</head>
+<body>
+ 
+    <h1>Formulario 2 </h1>
+    <form action="">
+    <table border="1">
+ 
+ 
+        <tr>
+            <th colspan=" 2 "> Inscrição </th>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="password" name="" id="">
+            </td>
+        </tr>
+ 
+       <tr>
+        <td>Cor</td>
+        <td>
+            <input type="color" name="" id="">
+        </td>
+       </tr>
+       <tr>
+        <td>Envio de ficheiro</td>
+        <td>
+            <input type="file" name="" id="">
+        </td>
+       </tr>
+       <tr>
+        <td>Data</td>
+        <td>
+            <input type="date" name="" id="">
+        </td>
+       </tr>
+       <tr>
+        <td>Range</td>
+        <td>
+            <input type="range" name="" id="">
+        </td>
+       </tr>
+       <tr>
+        <td>Week</td>
+        <td>
+            <input type="week" name="" id="">
+        </td>
+       </tr>
+    </table>
+</form>
+ 
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>data e arrays</h1>
+    <br>
+    <br>
+    <button onmousemove="mostra_datas()">clique aqui para mostrar as datas</button>
+
+    <section id="resultado">
+        <P>aqui vao aparecer os resultados</P>
+        <br>
+        
+        
+</section>
+<br>
+<button onclick="data_nasc()">insira a sua data de nascimento</button>
+<br>
+
+<section id="resultado_data">
+
+</section>
+    
+
+
+        <script>
+
+
+
+
+
+
+
+            function mostra_datas() {
+                // variavel data atual dentro do script atualiza a data ao clique se fica fora atualiza ao atualizar a pagina
+                let data_atual = new Date();
+                //alert(data_atual)
+
+
+                let meses = new Array("janeiro", "fevereiro", " março", "abril ", "maio    ", " junho ", " julho ", "agosto", "setembro", "outubro", "novembro", "dezembro")
+                //criando um array de dados 
+                let dias = new Array("domingo", "segunda", "terca", "quarta", "quinta", "sexta", "sabado");
+                //alert(dias[3]); //para ver o valor do indice 3 do array (quarta)
+
+                let escrita = document.querySelector('section#resultado');
+                // inner html escreve no final vai construindo a string o document.write escreve na hora e substitui tudo
+
+                escrita.innerHTML = '<p> a data atual é <br> ' + data_atual + ' </p>'
+                // getday getmonth tras nos da data atual esses parametros
+                //+= faz escrever a anterior mais a seguinte e o nosso a<- a+1
+                escrita.innerHTML += '<p> o dia da semana e <br> ' + data_atual.getDay() + ' </p>'
+
+                escrita.innerHTML += '<p> o indice do dia da semana é <b>' + data_atual.getDay() + '</b> e corresponde ao dia da semana <b>' + dias[data_atual.getDay()] + ' </b>'
+
+
+                escrita.innerHTML += '<p> o indice do mes é <b> ' + data_atual.getMonth() + ' </b> e o mes é' + meses[data_atual.getMonth()] + '</p>'
+
+                escrita.innerHTML += '<p> a ano é <br> ' + data_atual.getFullYear() + ' </p>'
+
+                escrita.innerHTML += '<p> hora: <b> ' + data_atual.getHours() + ' </p>'
+                escrita.innerHTML += '<p> minutos: <b> ' + data_atual.getMinutes() + ' </p>'
+                escrita.innerHTML += '<p> segundos: <b> ' + data_atual.getSeconds() + ' </p>'
+                                //se colocarmos getday ele vai buscar o indice do dia da semana e nao o dia atual para isso usamos o getdate 
+                escrita.innerHTML+=('<p> Braga,' +data_atual.getDate() + ' de ' +meses[data_atual.getMonth()]+ ' de '+data_atual.getFullYear()+ '</p>');
+
+
+            }
+
+            function data_nasc()
+            {
+                
+                let dias = new Array("domingo","segunda","terca", "quarta", "quinta", "sexta", "sabado");
+                let meses = new Array("janeiro", "fevereiro", " março", "abril ", "maio ", " junho ", " julho ", "agosto", "setembro", "outubro", "novembro", "dezembro")
+                
+
+                let data_nascimento = new Date(prompt("introduza a sua data de nascimento"));
+
+                let escrita1 = document.querySelector('section#resultado_data');
+
+                escrita1.innerHTML='<p> nasceu dia ' +data_nascimento.getDate()+' a um(a) '+ dias[data_nascimento.getDay()] +' do mes de '+meses[data_nascimento.getMonth()]+'</p>';
+
+                //escrita.innerHTML='<p> nasceu dia ' +data_nascimento.getDate()+' a um(a) '+ dias[data_nascimento.getDay()] +'do mes de' +meses[data_nasc.getMonth()]+'</p>';
+
+
+            }
+
+
+
+        </script>
+
+    
+</body>
+
+</html>

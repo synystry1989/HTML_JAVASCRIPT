@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      
+      alert(Math.random());
+      // mathrando gera numeros entre zero e 1 se kisermos ficar com numeros compreendidos entre 0 e 100 multipicamos por 100
+
+      //  Math.trunc(Math.random() * 100) + 1;
+
+      do
+       {
+        jogo();
+        repeat = Number(prompt("se dejesa continuar prima 1 se nao prima 2"));
+      } while ((repeat == 1));
+
+      alert("obrigado");
+
+      function jogo()
+       {
+        let repeat = 0;
+        let sorteio = Math.trunc(Math.random() * 100) + 1;
+        let numero = 0;
+        let contador = 0;
+        alert(sorteio);
+
+        do {
+          numero = Number(prompt("Digite um numero entre 1 e 100"));
+          contador++;
+          if (numero < sorteio) {
+            alert("o numero inserido é menor que o numero aleatorio");
+          } else if (numero > sorteio) {
+            alert(" o numero inserido é maior que o numero aleatorio");
+          } else {
+            alert("voce acertou em " + contador + " tentativas");
+          }
+        } while (sorteio != numero);
+      }
+    </script>
+  </body>
+</html>

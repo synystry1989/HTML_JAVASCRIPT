@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            font-size: 24px;
+            color: blue;
+        }
+
+        .css {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>exercicio2</h1>
+    <script>
+
+        function media()
+        {
+        let numero
+        let contador = 0
+        let notas = 0;
+        let vezes =  Number(prompt("Digite a quantidade de notas que deseja inserir"))
+        do 
+        {
+            numero =  Number(prompt("insitra a sua nota"))
+            contador++
+            notas += numero      
+        }
+        while ( vezes > contador)
+
+        let media = notas / contador
+
+        if (media < 10) {
+            document.write("<p class ='css'>a media dos numeros é :" + media, "<p/>", "<p> e é negativa.</p>")
+        }
+        else {
+            document.write("<p class ='css'>a media dos numeros é :" + media, "<p/>", "<p> e é positiva.</p>")
+        }
+
+    }
+
+
+
+    </script>
+
+    
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>funcoes em javascript</h1>
+    <br>
+
+
+    <br>
+    <br>
+    <!-- onclick faz o calculo da tabuada logo no input -->     
+    <input type="number" id="numero" value="1" onclick="tabuada()">
+
+    <button onclick="tabuada()">tabuada</button>
+    <button onclick="limpartabuada()">limpar tabuada</button>
+    <br>
+    <br>
+    <section  id="saida">
+
+    </section>
+
+    <script>
+
+
+
+
+        function tabuada() {
+
+            let entrada=Number(document.getElementById("numero").value)
+
+            let saida = document.getElementById("saida")
+
+            
+
+
+
+            for (let i = 1; i <= 10; i++) {
+                tabuada2 = (entrada * i)
+                //para escrevermos diretamente no html e nao na promp de comandos utilizamos o document.write
+                //como estamos a escrever na tela do html temos k usar comandos do html
+                //document.write(entrada+'*'+i+"=" +tabuada+"<br>"); // br introduz uma breakrow no nosso html
+           //para nao escrever a resposta uma em cima da outra temos que dizer que a linha seguinte vai tomar o valor da anterior + a entrada
+                saida.innerHTML=saida.innerHTML+(entrada + '*' + i + "=" + tabuada2 + "<br>")
+// innerHTML escreve
+                saida.innerHTML+=(entrada + '*' + i + "=" + tabuada2 + "<br>")
+            }
+        }
+
+
+
+
+
+        function limpartabuada() {
+            saida.innerHTML=" "
+
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

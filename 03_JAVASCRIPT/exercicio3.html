@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- formatacoes bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- para ir buscar as formatacoes de scrips do bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <input type="number" id="numero" value="1">
+
+    <button onclick="hora()">calcule</button>
+
+
+    <section id="saida">
+    
+    </section>
+<script>
+   
+   
+    //let numero = Number(prompt("introduza em segundos  que trabalhou")) 
+    hora()
+
+   
+    
+    
+
+    function hora()
+    {    
+    let entrada=Number(document.getElementById("numero").value)
+    let saida = document.getElementById("saida")
+
+    let minutos = Math.round(((entrada/ 60)*100)/100)
+    let horas = minutos/ 60
+    
+    saida.innerHTML=("<p>O trabalhador trabalhou "+horas+" horas , "+minutos+" minutos e " +entrada+"segundos</p>");
+    
+    
+   }
+</script>
+</body>
+</html>

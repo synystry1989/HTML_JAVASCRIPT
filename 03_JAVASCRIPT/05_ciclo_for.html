@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body
+        {
+
+
+
+            background-color: aqua
+            ;  font-family: Arial;
+            font-size: xx-large;
+
+        }   
+    
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <script>
+
+        let numero = parseInt(prompt("Ingrese un número inteiro"));
+
+        /*
+        para variável i de 1 ate valor N 10 passo P(contador) faca 
+            ... 
+        fimpara 
+        equivalente
+         */
+
+        alert("tabuada  do " + numero);
+        for (let i = 1; i <= 10; i++) {
+            let tabuada = (numero * i)
+            //para escrevermos diretamente no html e nao na promp de comandos utilizamos o document.write
+            //como estamos a escrever na tela do html temos k usar comandos do html
+            document.write( (tabuada), "<br>"); // br introduz uma breakrow no nosso html
+
+    
+            // para fazermos kk alteracao de style especifica a uma tabela ou titulo para a nossa tabuada devemos inserir no scrip tabuada desse tipo
+            // document.write('<h4>', (tabuada), "</h4><br>");
+
+
+
+        }
+    </script>
+</body>
+
+</html>
